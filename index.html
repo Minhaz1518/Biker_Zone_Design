@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Zone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+    <!-- Navber -->
+
+        <div class="overflow-hidden relative h-[700px] w-auto flex flex-col justify-start items-start 
+            md:h-[700px] md:flex md:flex-col ">
+
+              <!-- Background Image -->
+                <div class="overflow-hidden absolute inset-0 flex items-center justify-center">
+                    <img src="./others/cover.jpg" alt="Travel Background" class="md:w-full md:h-full md:object-cover 
+                    w-full/50 h-full object-cover object-[70%_55%]" />
+                    <div class="absolute inset-0 bg-black bg-opacity-55"></div>
+                </div>
+
+                <!-- nav - 1 -->
+
+                <div class="mt-[20px] w-full overflow-hidden relative z-10 h-[300px]  flex 
+                    md:pt-[30px] md:mt-[10px] md:h-[200px] md:flex md:flex-row  md:justify-between md:items-center
+                    md:space-x-auto">
+                
+                
+
+                    <div class="ml-[30px] w-[300px] flex justify-start items-center 
+                    md:block flex md:justify-center md:items-start md:ml-[70px]">
+                        <h3 class="text-[#FFF] font-serif text-[50px] md:text-[50px] font-[700]">GO <span class="text-[#E76F51]">R</span>IDE</h3>
+                    </div>
+            
+
+                     <!-- Navigation Wrapper -->
+
+                        <!-- Dropdown Menu -->
+                    <div  class="w-[200px] flex justify-end items-start md:w-[600px] md:justify-normal ">
+
+
+                            <div id="dropdown-menu" class=" hidden md:block  flex flex-col 
+                                md:flex-row md:items-center  md:block md:relative md:z-10 transition-all duration-300 ease-in-out">
+                                <ul class="md:flex flex-row gap-2 md:gap-7 text-[#FFF] text-[18px] font-[600] items-center">
+                                    <li><a href="#" class="hover:text-[#E76F51]">Home</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">Shop</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">News</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">Contact</a></li>
+                                    <li>
+                                        <a
+                                        class="group relative inline-block text-sm font-medium text-white focus:ring-3 focus:outline-hidden"
+                                        href="#"
+                                        >
+                                        <span class="absolute inset-0 border border-[#E76F51]  "></span>
+                                        <span
+                                            class="block bg-[#E76F51] bg-red-600 px-12 py-3 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1"
+                                        >
+                                            Login
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        <!-- Mobile Menu Button -->
+                         <!-- Header Wrapper -->
+                            <header class="md:hidden w-auto text-white">
+                                    <div class="flex justify-between items-center">
+
+                                    <!-- Mobile Menu Button -->
+                                    <div class="md:hidden">
+                                    <button
+                                        id="menu-button"
+                                        class="text-white text-[25px] focus:outline-none"
+                                        aria-controls="mobile-menu"
+                                        aria-expanded="false"
+                                    >
+                                        ☰
+                                    </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Dropdown Menu -->
+                                <div
+                                    id="mobile-menu"
+                                    class="pr-[20px] mt-4 max-h-0 overflow-hidden transition-all duration-200 ease-in md:hidden"
+                                >
+                                    <ul class="flex flex-col gap-4 text-[15px] font-semibold">
+                                    <li><a href="#" class="hover:text-[#E76F51]">Home</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">Shop</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">News</a></li>
+                                    <li><a href="#" class="hover:text-[#E76F51]">Contact</a></li>
+                                    <li>
+                                        <a
+                                        href="#"
+                                        class="block bg-[#E76F51] text-center  rounded-md text-white hover:bg-[#d65c3f]"
+                                        >
+                                        Login
+                                        </a>
+                                    </li>
+                                    </ul>
+                                </div>
+                            </header>
+
+                        <!-- Script for toggle -->
+                        <script>
+                        const menuBtn = document.getElementById("menu-button");
+                        const mobileMenu = document.getElementById("mobile-menu");
+
+                        let isOpen = false;
+
+                        menuBtn.addEventListener("click", () => {
+                            isOpen = !isOpen;
+                            menuBtn.setAttribute("aria-expanded", isOpen);
+
+                            if (isOpen) {
+                            mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+                            } else {
+                            mobileMenu.style.maxHeight = "0px";
+                            }
+                        });
+                        </script>
+                    </div>
+
+
+                </div>
+                <!-- nav end -->
+
+
+                <!-- Nav - 2 -->
+
+                <div class="hidden md:block mt-[100px] ml-[70px] h-[500px] w-[600px]  relative z-10  ">
+
+                    <h3 class="text-[45px] font-Poppins font-[700]  text-white">Keep Your Ride Safe At Every Time</h3>
+                    <p class="mt-[15px] text-[18px] font-[200] font-Poppins text-white">Amet minim mollit non deserunt ullamco est sit aliqua dolor 
+                            do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+                    <button
+                        class="group mt-[40px]  inline-block rounded-sm bg-[#E76F51] p-[2px] hover:text-white focus:ring-3 focus:outline-none"
+                        type="button">
+                        <span class="block rounded-xs bg-white px-8 py-3 text-sm font-medium group-hover:bg-[#E76F51]">
+                            Purchase
+                        </span>
+                    </button>
+        
+
+                </div>
+
+                <!-- nav - 2 -> mobile Responsive -->
+
+                <div class="group md:hidden ml-[30px] mt-[30px]  h-[400px] w-1/2 relative z-10">
+
+                    <h3 class="text-[30px] font-Poppins font-[700] text-white">Keep Your Ride Safe At Every Time</h3>
+                    <p class="mt-[5px] text-opacity-70  text-[15px] font-[200] font-Poppins text-white">Amet minim mollit non deserunt ullamco est sit aliqua dolor 
+                            do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+
+                    <button
+                        class="group mt-[30px]  inline-block rounded-sm bg-[#E76F51] p-[2px] hover:text-white focus:ring-3 focus:outline-none"
+                        type="button">
+                        <span class="block rounded-xs bg-white px-8 py-3 text-sm font-medium group-hover:bg-[#E76F51]">
+                            Purchase
+                        </span>
+                    </button>
+        
+
+                </div>
+        </div>
+
+
+    <!-- Navbar End  -->
+
+
+
+</body>
+</html>
